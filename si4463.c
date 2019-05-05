@@ -269,6 +269,6 @@ int16_t SI4463_getRSSI()
 //		{
 //			buff_patch[col] = Radio_Patch_Array[row][col];
 //		}
-//		SI4463_Set_Property( buff_patch, 8 );
+//		SI4463_Send_With_CTS( buff_patch, 8 );
 //	}
 //}
