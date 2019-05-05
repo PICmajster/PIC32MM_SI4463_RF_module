@@ -102,8 +102,8 @@ int main(void)
       /*RX*/
           if(!IO_nIRQ_GetValue()){ //nIRQ Low ?
             SI4463_Get_Interrupt(inter_buff); //get interrupt status and clear 
-            if(inter_buff[2] & 0x10) {//PACKET RX PEND interruption ??, see API Documentation GET_INT_STATUS ??
-                if(!(inter_buff[2] & 0x08)) {//CRC data interruption Error ?)
+            if(inter_buff[2] & 0x10) {//PACKET RX PEND interruption ??, see API Documentation GET_INT_STATUS
+                if(!(inter_buff[2] & 0x08)) {//CRC_ERROR_PEND interruption ?? CRC data interruption Error ? see API Documentation GET_INT_STATUS))
                 
                 SI4463_RX_FIFO ( receive_buff, SI4463_Get_Packet_Info()  ); //rewrite data from the RX FIFO (hardware buffer) to the receive_buff (user buffer) 
                 licznik++;
